@@ -1,0 +1,41 @@
+
+---
+
+### 3. INSTRUCTIONS.md (Full Detailed Guide)
+
+```markdown
+# MorPHYes Emissary - Full Instructions
+
+## Requirements
+- Windows, Mac, or Linux
+- Python 3.10 or newer
+- A Gmail account
+
+## Step 1: Create google_credentials.json (One-Time Setup)
+
+1. Go to [https://console.cloud.google.com](https://console.cloud.google.com)
+2. Click the project dropdown at the top → **New Project**
+3. Name it `MorPHYes Emissary` and click **Create**
+4. In the left menu, go to **APIs & Services → Library**
+5. Search for **Gmail API** and click **Enable**
+6. In the left menu, go to **APIs & Services → Credentials**
+7. Click **Create Credentials → OAuth client ID**
+8. If prompted, configure the OAuth consent screen:
+   - User Type: **External**
+   - App name: `MorPHYes Emissary`
+   - Support email: your email
+   - Click **Save and Continue** (you can skip the rest)
+9. Back on the Create OAuth client ID screen:
+   - Application type: **Desktop app**
+   - Name: `MorPHYes Emissary`
+   - Click **Create**
+10. Click **Download JSON**
+11. Rename the file to exactly: `google_credentials.json`
+12. Place this file in the **same folder** as `emissary.py`
+
+## Step 2: Install and Run
+
+1. Open a terminal/command prompt in the folder containing `emissary.py`
+2. Run:
+   ```bash
+   pip install streamlit google-auth-oauthlib google-auth-httplib2 google-api-python-client
